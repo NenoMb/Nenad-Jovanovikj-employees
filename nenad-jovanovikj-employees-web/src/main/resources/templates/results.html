@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 mt-5 mb-5">
+      <table id="example" class="table table-bordered" style="width: 100%">
+        <thead>
+        <tr >
+          <th>First Employee</th>
+          <th>Second Employee</th>
+          <th>ProjectId</th>
+          <th>Days worked</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="project : ${commonProjects.keySet()}">
+          <td th:text="${firstEmployee}">Name 1</td>
+          <td th:text="${secondEmployee}">Name 2</td>
+          <td th:text="${project}">Project</td>
+          <td th:text="${commonProjects.get(project)}">days Together</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+
+</body>
+</html>
